@@ -1,0 +1,36 @@
+@import "@styles/theme.module.scss";
+
+.root {
+  padding-top: 2.5em;
+  padding-right: 2em;
+  padding-left: 2em;
+  background-color: transparent;
+}
+.p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+  margin-bottom: 2em;
+}
+.h1 {
+  margin-bottom: 1em;
+  font-family: $header-font;
+  font-size: 26px;
+  font-weight: 500;
+  color: black;
+}
+
+.select {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+  border-radius: 10px;
+  border: 1px solid #4a555c;
+  width: 100%;
+  margin-bottom: 6em;
+}

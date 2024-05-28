@@ -1,0 +1,15 @@
+@import "@styles/theme.module.scss";
+
+.root {
+  font-family: $paragraph-font;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ff8516;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 6em;
+  height: 2em;
+  line-height: 2em;
+  cursor: pointer;
+}

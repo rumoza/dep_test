@@ -1,0 +1,26 @@
+@import "@styles/theme.module.scss";
+
+.root {
+  background-color: #f6f6f6;
+  height: fit-content;
+  padding-top: 0.25em;
+  display: flex;
+
+  &.dark {
+    background-color: #e1e1e1;
+    color: white;
+  }
+}
+
+.sliderSubTrack {
+  width: 10%; /* Each sub-slider takes up 10% of the width */
+  height: 0.25em;
+  background: #e1e1e1;
+  position: relative;
+  overflow: hidden;
+  transition: background 2s ease-in-out; /* Increased duration for smoother transition */
+
+  &.filled {
+    background: #ff8516;
+  }
+}

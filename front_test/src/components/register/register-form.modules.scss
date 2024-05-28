@@ -1,0 +1,184 @@
+@import "@styles/theme.module.scss";
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  font: $header-font;
+  letter-spacing: 1%;
+  margin-bottom: 0.6em;
+}
+//we want to scale up the max-width whilst the screen is se to $mobile-width
+//this is going to be the standard from now on
+.full-container {
+  background-color: $header-color;
+  margin: 0 auto;
+  max-width: $mobile-width;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $mobile-width) {
+    max-width: $desktop-width;
+  }
+}
+.form-container {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+
+  align-items: left;
+  justify-content: center;
+  margin: 0.5em auto 6em auto;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  box-shadow: $box-shadow;
+  width: 75%;
+
+  @media (max-width: $phone-width) {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  //we want to program it to be mobile first
+  //so when it is more than 600px width it's gonna scale
+  @media (min-width: $mobile-width) {
+    width: 55%;
+  }
+  @media (min-width: 1080px) {
+    width: 40%;
+  }
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  padding: 0.5em;
+  margin: 0.2em 0 1.5em 0;
+  background-color: $our-orange;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/*
+.form-button:hover {
+  background-color: #2c2c6c;
+  filter: brightness(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-button:active {
+  background-color: #000;
+  filter: brightness(100%);
+}
+*/
+.form-input {
+  margin: 0;
+}
+
+.form-input:hover {
+  border: 1px solid $our-orange;
+  transition: all 0.5s ease-in-out;
+}
+label {
+  color: $small-grey-writing;
+  transform: translate(0.3rem, -3rem);
+  transition: all 0.2s ease-out;
+  margin: 0.2em;
+}
+input:focus {
+  border-color: $our-orange;
+  transition: border-color 0.2s ease-out;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translate(0.3rem, -4rem);
+}
+input {
+  z-index: $z-index-modal;
+  width: 80%;
+  border: none;
+  border-radius: $our-border-radius;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+label {
+  z-index: $z-index-dropdown;
+}
+.sameLine-input
+//login bottom part
+
+.bottom-container {
+  margin: 1em 0 0 0;
+  width: 100%;
+}
+
+.or-line-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin: 1em 0;
+  width: 100%;
+}
+.br-line {
+  height: 1px;
+  background-color: #e1e1e1;
+  margin: 0 0.5em;
+}
+.left-line {
+  width: 40%;
+  @media (min-width: $mobile-width) {
+    width: 43%;
+  }
+}
+
+.right-line {
+  width: 40%;
+  @media (min-width: $mobile-width) {
+    width: 42%;
+  }
+}
+
+.google-linkedin-container {
+}
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: bottom;
+  row-gap: 2em;
+  justify-content: bottom;
+  margin: 1em 0 0 0;
+  flex-wrap: wrap;
+
+  font-size: x-small;
+
+  h2 {
+    color: $small-grey-writing;
+    a {
+      color: $our-orange;
+      font-weight: 800;
+    }
+  }
+  h3 {
+    color: black;
+    font-weight: 600;
+  }
+
+  @media (min-width: $mobile-width) {
+    font-size: small;
+  }
+}
+
+.signin-internal {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-between;
+  column-gap: 0.3em;
+}

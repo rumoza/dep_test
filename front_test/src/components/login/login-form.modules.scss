@@ -1,0 +1,206 @@
+@import "@styles/theme.module.scss";
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  font: $header-font;
+  letter-spacing: 1%;
+  margin-bottom: 0.5em;
+}
+//we want to scale up the max-width whilst the screen is se to $mobile-width
+//this is going to be the standard from now on
+.full-container {
+  background-color: $header-color;
+  margin: 0 auto;
+  max-width: $mobile-width;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $mobile-width) {
+    max-width: $desktop-width;
+  }
+}
+.form-container {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+
+  align-items: left;
+  justify-content: center;
+  margin: 2em auto 5em auto;
+  padding: 2em;
+  border-radius: $our-border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+
+  //we want to program it to be mobile first
+  //so when it is more than 600px width it's gonna scale
+  @media (min-width: $mobile-width) {
+    width: 40%;
+  }
+}
+
+.form-input {
+  width: 95%;
+  padding: 1em 1em 0 1em;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: $our-border-radius;
+  box-sizing: border-box;
+  height: 4em;
+}
+.form-input:hover {
+  border: 1px solid $our-orange;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  padding: 0.5em;
+  margin: 0.3em 0 1.5em 0;
+  background-color: $our-orange;
+  color: white;
+  border: none;
+  border-radius: $our-border-radius;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/*
+.form-button:hover {
+  background-color: #2c6c3d;
+  filter: brightness(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-button:active {
+  background-color: #000;
+  filter: brightness(100%);
+}
+*/
+
+label {
+  color: #999;
+  transform: translate(0.3rem, -3rem);
+  transition: all 0.2s ease-out;
+  margin: 0.2em;
+}
+input:focus {
+  border-color: $our-orange;
+  transition: border-color 0.2s ease-out;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  color: #999;
+  transform: translate(0.3rem, -4rem);
+}
+input {
+  z-index: 2;
+  padding: 0.5em;
+  margin: 0.3em 0 1.5em 0;
+  width: 80%;
+  border: none;
+  border-radius: $our-border-radius;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+label {
+  z-index: 1;
+}
+
+//login bottom part
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  width: 100%;
+}
+
+.or-line-container {
+  justify-self: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 1em 0;
+  width: 100%;
+}
+.br-line {
+  height: 1px;
+  background-color: #e1e1e1;
+}
+.left-line {
+  justify-self: left;
+}
+
+.right-line {
+  justify-self: right;
+}
+
+.google-linkedin-container {
+}
+
+.Forgot-create_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: bottom;
+
+  justify-content: space-between;
+  column-gap: 0.5em;
+  margin: 1em 0 0 0;
+  width: 100%;
+  font-size: 0.7em;
+
+  text-align: left;
+
+  @media (min-width: $phone-width) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: $mobile-width) {
+    flex-direction: row;
+  }
+}
+
+.forgot-pass {
+  height: fit-content;
+  width: fit-content;
+  margin-top: 5%;
+  white-space: nowrap;
+}
+
+.forgot-pass:hover {
+  color: $our-purple;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.create-acc {
+  margin-top: 5%;
+  height: min-content;
+  width: min-content;
+  text-align: left;
+  white-space: nowrap;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    color: $small-grey-writing;
+  }
+
+  h3 {
+    margin: 0;
+  }
+  h3:hover {
+    color: $our-purple;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}

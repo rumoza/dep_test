@@ -1,0 +1,10 @@
+export { Capital as CapitalStartup } from "./capital/capital";
+export { Expertise as ExpertiseStartup } from "./expertise/expertise";
+export { Impact as ImpactStartup } from "./impact/impact";
+export { Industry as IndustryStartup } from "./industry/industry";
+export { Matching as MatchingStartup } from "./matching/matching";
+export { Results as ResultsStartup } from "./results/results";
+export { Sdg as SdgStartup } from "./sdg/sdg";
+export { Stage as StageStartup } from "./stage/stage";
+export { Strategy as StrategyStartup } from "./strategy/strategy";
+export { Values as ValuesStartup } from "./values/values";

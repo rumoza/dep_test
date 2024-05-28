@@ -1,0 +1,68 @@
+@import "@styles/theme.module.scss";
+
+.root {
+  padding-top: 2.5em;
+  padding-right: 2em;
+  padding-left: 2em;
+  background-color: transparent;
+}
+.p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+  margin-bottom: 2em;
+}
+.h1 {
+  margin-bottom: 1em;
+  font-family: $header-font;
+  font-size: 26px;
+  font-weight: 500;
+  color: black;
+}
+
+.expertise {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  column-gap: 0.5em;
+  margin-bottom: 2em;
+  width: fit-content;
+}
+
+.button {
+  border-radius: 20px;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  justify-content: center;
+  line-height: 2em;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  min-width: 7.5em;
+  max-width: fit-content;
+  height: 2em;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 1px solid #ff8516;
+}
+
+.selected {
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  line-height: 2em;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  width: 7.5em;
+  height: 2em;
+  border: 0px;
+  color: white;
+  background-color: #ff8516;
+  cursor: pointer;
+}

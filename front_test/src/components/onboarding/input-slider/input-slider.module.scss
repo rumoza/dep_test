@@ -1,0 +1,49 @@
+@import "@styles/theme.module.scss";
+
+.InputSlider_container {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.slider-label {
+  position: absolute;
+  top: -15px; // Adjust this value as needed
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.slider {
+  color: $our-orange;
+}
+
+.slider .MuiSlider-rail {
+  color: gray;
+  transition: none;
+}
+
+.slider .MuiSlider-track {
+  transition: none;
+  color: $our-orange;
+}
+
+.slider .MuiSlider-thumb {
+  background-image: url("../assets/inputSlider-thumb.svg");
+  background-position: center;
+  background-color: transparent;
+  height: 25px;
+  width: 30px;
+  border-radius: 1px;
+  transform: translate(-0.85rem, 0rem);
+  transition: none;
+}
+
+.slider .MuiSlider-thumb::before {
+  box-shadow: none;
+}
+
+.slider .MuiSlider-thumb:hover,
+.slider .MuiSlider-thumb:active {
+  transition: none;
+  box-shadow: none;
+}
